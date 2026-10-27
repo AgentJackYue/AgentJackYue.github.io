@@ -10,7 +10,7 @@ math: true
 去 Intermarché 买生活物资，路过大学城，偶遇学校圈养的一大群羊。恰逢夕阳余晖染透天边，便举起手机，拍下此景。
 
 {% include live-photo.html
-   image="000.png"
+   image="000.jpg"
    video="/assets/img/posts/Sheep_in_Campus/000.mp4"
    alt="Des moutons sur la pelouse du campus universitaire de Grenoble"
    caption="Domaine universitaire de Saint-Martin-d’Hères, Grenoble, France — 22 mars 2026"
