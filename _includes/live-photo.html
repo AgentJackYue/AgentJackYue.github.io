@@ -1,0 +1,37 @@
+{% assign image_src = include.image | relative_url %}
+{% assign video_src = include.video | relative_url %}
+
+<figure class="live-photo">
+  <div
+    class="live-photo__player"
+    role="button"
+    tabindex="0"
+    aria-label="播放实况照片"
+    aria-pressed="false"
+  >
+    <img
+      class="live-photo__image"
+      src="{{ image_src }}"
+      alt="{{ include.alt | default: '' | escape }}"
+      loading="lazy"
+    >
+
+    <video
+      class="live-photo__video"
+      src="{{ video_src }}"
+      preload="none"
+      muted
+      playsinline
+      loop
+      aria-hidden="true"
+    ></video>
+
+    <span class="live-photo__hint" aria-hidden="true">
+      LIVE
+    </span>
+  </div>
+
+  {% if include.caption %}
+    <figcaption>{{ include.caption | escape }}</figcaption>
+  {% endif %}
+</figure>
