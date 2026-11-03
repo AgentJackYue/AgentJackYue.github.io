@@ -1,0 +1,99 @@
+
+{% assign gallery_images = include.images | split: "," %}
+{% assign gallery_captions = include.captions | split: "|" %}
+{% assign gallery_alts = include.alts | split: "|" %}
+{% assign gallery_id = include.id | default: "gallery" %}
+{% assign gallery_mode = include.mode | default: "horizontal" %}
+
+<div class="photo-gallery photo-gallery--{{ gallery_mode | escape }}"
+     id="{{ gallery_id | escape }}">
+
+  <div class="photo-gallery__header">
+    {% if include.title %}
+      <h3 class="photo-gallery__title">
+        {{ include.title | escape }}
+      </h3>
+    {% endif %}
+
+    <span class="photo-gallery__counter"
+          aria-live="polite"
+          aria-atomic="true">
+      1 / {{ gallery_images.size }}
+    </span>
+  </div>
+
+  {% if gallery_mode == "coverflow" %}
+
+    <div class="photo-gallery__swiper swiper">
+      <div class="swiper-wrapper">
+
+        {% for filename in gallery_images %}
+          {% assign image_name = filename | strip %}
+          {% assign caption = gallery_captions[forloop.index0] | strip %}
+          {% assign alt_text = gallery_alts[forloop.index0] | strip %}
+
+          {% if alt_text == "" %}
+            {% assign alt_text = caption %}
+          {% endif %}
+
+          <div class="swiper-slide photo-gallery__item"
+               data-caption="{{ caption | escape }}">
+
+            <img
+              src="{{ include.folder | append: '/' | append: image_name | relative_url }}"
+              alt="{{ alt_text | escape }}"
+              loading="lazy"
+              decoding="async"
+            >
+
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+
+    <div class="photo-gallery__active-caption"
+         aria-live="polite">
+      {{ gallery_captions[0] | strip | escape }}
+    </div>
+
+  {% else %}
+
+    <div class="photo-gallery__viewport"
+         tabindex="0"
+         aria-label="{{ include.title | default: '图片集' | escape }}，可横向滚动">
+
+      {% for filename in gallery_images %}
+        {% assign image_name = filename | strip %}
+        {% assign caption = gallery_captions[forloop.index0] | strip %}
+        {% assign alt_text = gallery_alts[forloop.index0] | strip %}
+
+        {% if alt_text == "" %}
+          {% assign alt_text = caption %}
+        {% endif %}
+
+        <figure class="photo-gallery__item">
+
+          <img
+            src="{{ include.folder | append: '/' | append: image_name | relative_url }}"
+            alt="{{ alt_text | escape }}"
+            loading="lazy"
+            decoding="async"
+          >
+
+          {% if caption != "" %}
+            <figcaption class="photo-gallery__caption">
+              {{ caption | escape }}
+            </figcaption>
+          {% endif %}
+
+        </figure>
+      {% endfor %}
+
+    </div>
+
+  {% endif %}
+
+</div>
+
+

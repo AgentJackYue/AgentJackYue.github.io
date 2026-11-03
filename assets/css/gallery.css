@@ -1,0 +1,103 @@
+
+/* =========================================
+   Coverflow Gallery — Swiper
+   ========================================= */
+
+.photo-gallery--coverflow {
+  --cover-height: 300px;
+}
+
+/* Each slide */
+.photo-gallery--coverflow .photo-gallery__swiper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 370px;
+  padding: 20px 0 30px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.photo-gallery--coverflow .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.photo-gallery--coverflow .swiper-slide {
+  flex: 0 0 auto;
+  width: auto;
+  height: var(--cover-height);
+  min-width: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Image */
+.photo-gallery--coverflow .swiper-slide img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 80vw;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Caption outside the 3D slides */
+.photo-gallery--coverflow .photo-gallery__active-caption {
+  min-height: 2.5em;
+  margin: 0.5rem 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Navigation */
+.photo-gallery--coverflow .photo-gallery__controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.photo-gallery--coverflow .photo-gallery__button {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .photo-gallery--coverflow {
+    --cover-height: 230px;
+  }
+
+  .photo-gallery--coverflow .photo-gallery__swiper {
+    height: 290px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-gallery--coverflow .photo-gallery__swiper {
+    scroll-behavior: auto;
+  }
+}
+
+.photo-gallery--coverflow .swiper-slide {
+  height: 300px;
+  overflow: hidden;
+}
+
+.photo-gallery--coverflow .swiper-slide img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
