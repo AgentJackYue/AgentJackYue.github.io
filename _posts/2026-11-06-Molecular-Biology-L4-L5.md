@@ -84,9 +84,17 @@ DNA ligase DNA连接酶
 
 ~ | DNA library construction | cDNA library construction
 <div style="display: flex; align-items: flex-start; gap: 10px;">
-  <img src="L4-L5Pic/output-016-000.jpg" style="width: 33%; height: auto;">
-  <img src="L4-L5Pic/output-017-001.jpg" style="width: 33%; height: auto;" title= "DNA library construction" >
-  <img src="L4-L5Pic/output-018-002.jpg" style="width: 33%; height: auto;" title="cDNA library construction">
+  <img src="L4-L5Pic/output-016-000.jpg"
+       style="width: 33%; height: auto;"
+       alt="DNA library construction process">
+
+  <img src="L4-L5Pic/output-017-001.jpg"
+       style="width: 33%; height: auto;"
+       alt="DNA library construction">
+
+  <img src="L4-L5Pic/output-018-002.jpg"
+       style="width: 33%; height: auto;"
+       alt="cDNA library construction">
 </div>
 
 - **Genomic DNA library**：用 restriction enzymes 或机械剪切把整个 genome 切成片段并克隆到 vectors。它包含 coding、noncoding 和 regulatory sequences，但是否含完整 gene 取决于片段大小与切点。
