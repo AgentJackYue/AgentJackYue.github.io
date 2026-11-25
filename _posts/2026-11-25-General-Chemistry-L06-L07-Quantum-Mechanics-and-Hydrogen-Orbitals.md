@@ -22,19 +22,19 @@ math: true
 对一维空间：
 
 $$
-P(x)=|\psi(x)|^2
+P(x)=\|\psi(x)\|^2
 $$
 
 $P(x)$ 是 probability density（概率密度）。粒子在 $x$ 到 $x+dx$ 之间出现的概率为：
 
 $$
-dP=P(x)\,dx=|\psi(x)|^2dx
+dP=P(x)\,dx=\|\psi(x)\|^2dx
 $$
 
 粒子在整个空间内必定出现，因此：
 
 $$
-\int_{-\infty}^{\infty}|\psi(x)|^2dx=1
+\int_{-\infty}^{\infty}\|\psi(x)\|^2dx=1
 $$
 
 这称为 wavefunction normalization（波函数归一化）。
@@ -182,7 +182,7 @@ $$
 - $1\ \mathrm{\AA}=10^{-10}\ \mathrm m$；
 - 波函数在 $r=0$ 附近最大，并随距离指数衰减。
 
-1s 轨道没有 node（节点），概率密度 $|\psi|^2$ 在核附近最大。三维图中常用颜色表示 $|\psi|^2$ 的大小或波函数的正负相位。
+1s 轨道没有 node（节点），概率密度 $\|\psi\|^2$ 在核附近最大。三维图中常用颜色表示 $\|\psi\|^2$ 的大小或波函数的正负相位。
 
 ![1s 轨道的波函数与电子概率分布](img/L06-L07-Quantum-Mechanics-and-Hydrogen-Orbitals/figure-04.png)
 
@@ -205,7 +205,7 @@ $$
 
 处变为 0，因此形成一个 **nodal sphere（球形节点）**。
 
-- 节点处 $\psi=0$，因此 $|\psi|^2=0$；
+- 节点处 $\psi=0$，因此 $\|\psi\|^2=0$；
 - 节点两侧波函数符号相反；
 - 2s 轨道有一个径向节点。
 
