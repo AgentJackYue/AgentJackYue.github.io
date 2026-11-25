@@ -32,7 +32,7 @@ The parser has:
 
 **Shift（移进）** moves the next input token onto the stack.
 
-**Reduce（归约）** replaces a right-hand side \(\gamma\) on top of the stack with a nonterminal \(X\), when a production \(X \to \gamma\) applies.
+**Reduce（归约）** replaces a right-hand side $\gamma$ on top of the stack with a nonterminal $X$, when a production $X \to \gamma$ applies.
 
 For grammar:
 
@@ -209,11 +209,11 @@ This is a shift/reduce conflict. The left-recursive alternative avoids that part
 
 **SLR(1)** uses the LR(0) automaton but adds grammar-wide FOLLOW information.
 
-For a reduce item \(A \to \gamma.\), permit reduction only when:
+For a reduce item $A \to \gamma.$, permit reduction only when:
 
-\[
+$$
 \text{lookahead} \in \operatorname{FOLLOW}(A).
-\]
+$$
 
 If a shift is possible on a different symbol, solve the conflict by lookahead.
 

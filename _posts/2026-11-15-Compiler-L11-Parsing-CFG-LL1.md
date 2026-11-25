@@ -34,10 +34,10 @@ A **Context-Free Grammar（上下文无关文法，CFG）** consists of:
 - a finite set of **nonterminals（非终结符）**, representing syntactic categories;
 - one designated start nonterminal;
 - productions of the form
-  \[
+  $$
   A \to \alpha,
-  \]
-  where \(A\) is a nonterminal and \(\alpha\) is a string of terminals and nonterminals.
+  $$
+  where $A$ is a nonterminal and $\alpha$ is a string of terminals and nonterminals.
 
 Example: balanced parentheses:
 
@@ -256,7 +256,7 @@ The left-factored grammar above is recursive on `S'`, which appears after the `+
 
 ## 8. FIRST and FOLLOW
 
-For a production \(A \to \alpha\):
+For a production $A \to \alpha$:
 
 - `FIRST(α)` contains terminals that can begin strings derived from α.
 - If α can derive ε, table entries also depend on `FOLLOW(A)`.

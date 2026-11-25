@@ -256,7 +256,7 @@ Define:
 Procedure:
 
 1. The DFA start state is `ε-closure({NFA_start})`.
-2. For a DFA state \(S\) and input symbol \(a\), compute `ε-closure(move(S,a))`.
+2. For a DFA state $S$ and input symbol $a$, compute `ε-closure(move(S,a))`.
 3. If the resulting set is new, add it as a new DFA state.
 4. Repeat until all reachable state sets have transitions.
 5. Mark a DFA state accepting if any NFA state in the set is accepting.
@@ -285,9 +285,9 @@ On the empty input, none of the reachable NFA states is the unique accept state,
 ## 10. Complete lexer-generator algorithm
 
 1. Combine token regexes:
-   \[
+   $$
    R=(R_1|R_2|\cdots|R_n).
-   \]
+   $$
 2. Remember which action belongs to each original accepting state.
 3. Build an NFA for the combined expression.
 4. Convert the NFA to a DFA using subset construction.

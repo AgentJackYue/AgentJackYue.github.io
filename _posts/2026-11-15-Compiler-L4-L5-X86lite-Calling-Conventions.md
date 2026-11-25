@@ -88,11 +88,11 @@ The third instruction computes:
 
 Memory addressing follows:
 
-\[
+$$
 \operatorname{addr}(ind)
 =
 \text{Base} + \text{Index}\times\text{Scale} + \text{Displacement}.
-\]
+$$
 
 Examples:
 
@@ -179,7 +179,7 @@ The comparison computes `rax - rcx`. If the result is zero, `ZF` is set and `je`
 
 ![X86lite memory and stack](03_Lectures_04-05_X86lite_Calling_Conventions/x86_memory_stack.png)
 
-`lec04.pdf` p. 17 presents X86lite memory as \(2^{64}\) bytes and describes legal addresses as 64-bit quadword-aligned pointers. The official X86lite specification instead describes byte-addressable memory with unaligned accesses allowed. The lecture's alignment model is used for the course presentation; the specification difference is supplementary and recorded as a source discrepancy.
+`lec04.pdf` p. 17 presents X86lite memory as $2^{64}$ bytes and describes legal addresses as 64-bit quadword-aligned pointers. The official X86lite specification instead describes byte-addressable memory with unaligned accesses allowed. The lecture's alignment model is used for the course presentation; the specification difference is supplementary and recorded as a source discrepancy.
 
 By convention, the stack occupies high-address memory and grows toward lower addresses. `%rsp` points to the current top.
 
@@ -244,7 +244,7 @@ gtext "program"
 
 ## 8. Worked factorial loop
 
-`p3 (n : int) : prog` emits a loop that computes \(n!\):
+`p3 (n : int) : prog` emits a loop that computes $n!$:
 
 ```text
 program:

@@ -39,7 +39,7 @@ Its nodes are **basic blocks（基本块）**. A basic block:
 
 ![Basic-block and CFG definition](05_Lecture_07_IR_CFG_LLVM/basic_blocks.png)
 
-A directed edge from block \(A\) to block \(B\) exists when the terminator of \(A\) may transfer control to the label of \(B\).
+A directed edge from block $A$ to block $B$ exists when the terminator of $A$ may transfer control to the label of $B$.
 
 Terminators in IR3 are:
 

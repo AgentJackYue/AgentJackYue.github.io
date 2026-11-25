@@ -309,13 +309,13 @@ The optimizer preserves final-state behavior while removing some unnecessary wor
 
 Optimization is supplementary to the main interpreter mechanism, but it demonstrates the correctness criterion
 
-\[
+$$
 \operatorname{interpret}(s,c)
 =
 \operatorname{interpret}(s,\operatorname{optimize}(c))
-\]
+$$
 
-for every initial state \(s\).
+for every initial state $s$.
 
 ## 10. Easily confused concepts
 

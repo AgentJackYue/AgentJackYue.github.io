@@ -15,13 +15,13 @@ A **compiler（编译器）** is a program that translates source code written i
 
 The source language is designed for human expression. Its syntax can be redundant and abstract, and it may leave machine-level decisions unspecified. The target language is designed around an execution model and may expose registers, memory, calling conventions, and explicit control flow.
 
-Compilation still has to preserve meaning. If \(P\) is a source program and \(C(P)\) is its compiled target program, correctness means that source and target semantics agree:
+Compilation still has to preserve meaning. If $P$ is a source program and $C(P)$ is its compiled target program, correctness means that source and target semantics agree:
 
-\[
+$$
 \llbracket P \rrbracket_{\text{source}}
 =
 \llbracket C(P) \rrbracket_{\text{target}}.
-\]
+$$
 
 This is the central invariant behind every stage in the course. Translation is not textual rewriting alone; it is manipulation of program representations whose meaning must remain stable.
 

@@ -108,11 +108,11 @@ After `bad` returns, its frame is no longer valid. Data that must outlive the ca
 
 For a one-dimensional array:
 
-\[
+$$
 \operatorname{address}(A[i])
 =
 \operatorname{base}(A) + i \cdot \operatorname{sizeof(element)}.
-\]
+$$
 
 Thus:
 
@@ -131,14 +131,14 @@ M[1][0], M[1][1], M[1][2], ...
 
 Therefore:
 
-\[
+$$
 \operatorname{addr}(M[i][j])
 =
 \operatorname{base}(M)
 + (i \cdot \text{columns}+j)\cdot\operatorname{sizeof}(int).
-\]
+$$
 
-For `M[4][3]`, the linear index is \(3i+j\). Fortran traditionally uses column-major order. Java and ML represent nested arrays through arrays of references, so their layout is not one contiguous multidimensional block by default.
+For `M[4][3]`, the linear index is $3i+j$. Fortran traditionally uses column-major order. Java and ML represent nested arrays through arrays of references, so their layout is not one contiguous multidimensional block by default.
 
 ## 6. Bounds checks and strings
 
@@ -298,7 +298,7 @@ Start with pointer value `ADDR`.
 
 The final address is:
 
-\[
+$$
 \begin{aligned}
 ADDR
 &+ \operatorname{size}(ST)\\
@@ -307,7 +307,7 @@ ADDR
 &+ 5\cdot20\cdot\operatorname{size}(i32)\\
 &+ 13\cdot\operatorname{size}(i32).
 \end{aligned}
-\]
+$$
 
 ### What GEP does not do
 

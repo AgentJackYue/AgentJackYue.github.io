@@ -24,7 +24,7 @@ Heterogeneous 非均相 体系中存在两个或更多不同的相，具有可�
 
 Isotope 同位素
 Absolute Atomic Mass 绝对原子质量
-Relative Atomic Mass (\(A_r\)) 相对原子质量
+Relative Atomic Mass ($A_r$) 相对原子质量
 Molar Mass 摩尔质量
 
 $N_A = 6.02\times 10^{23}$
@@ -325,13 +325,13 @@ Vacuum level 真空能级
 Planck’s Law 普朗克定律
 - 能量只能取离散值
 - 能量以量子为单位吸收或释放
-\[
+$$
 \boxed{\Delta\varepsilon=h\nu}
-\]
+$$
 
-  \(\Delta\varepsilon\)：一次能量跃迁对应的能量差。
-  \(h\)：普朗克常数，约为 \(6.626\times10^{-34}\ \mathrm{J\cdot s}\)。
-  \(\nu\)：频率，单位为 Hz。
+  $\Delta\varepsilon$：一次能量跃迁对应的能量差。
+  $h$：普朗克常数，约为 $6.626\times10^{-34}\ \mathrm{J\cdot s}$。
+  $\nu$：频率，单位为 Hz。
 
 - 温度足够高，才能激发高能级
 这里的逻辑是：
@@ -342,15 +342,15 @@ Planck’s Law 普朗克定律
 Bohr Model（玻尔原子模型）
 玻尔模型主要用来解释氢原子的能级为什么是离散的，以及原子为什么会发射或吸收特定频率的光。它把你刚学的 Planck 量子化思想应用到了原子结构中。
 一、核心公式
-对于氢原子或类氢离子（只有一个电子，例如 \(\mathrm{He^+}\)、\(\mathrm{Li^{2+}}\)），有以下几个常用公式。
+对于氢原子或类氢离子（只有一个电子，例如 $\mathrm{He^+}$、$\mathrm{Li^{2+}}$），有以下几个常用公式。
 1. 电子的能级（Energy levels）
-\[
+$$
 \boxed{E_n=-\frac{13.6Z^2}{n^2}\ \mathrm{eV}}
-\]
+$$
 
-- \(n=1,2,3,\ldots\)：主量子数（principal quantum number）。
-- \(Z\)：原子核的电荷数，例如 H 的 \(Z=1\)，\(\mathrm{He^+}\) 的 \(Z=2\)。
-- \(E_n\)：第 \(n\) 个能级的能量。
+- $n=1,2,3,\ldots$：主量子数（principal quantum number）。
+- $Z$：原子核的电荷数，例如 H 的 $Z=1$，$\mathrm{He^+}$ 的 $Z=2$。
+- $E_n$：第 $n$ 个能级的能量。
 
 # Lecture 5
 Amplitude 振幅 $A$
@@ -371,19 +371,19 @@ oscillatory part 振荡部分
 amplitude part 振幅部分
 
 公式	含义	主要用途
-\(E=h\nu\)	光子能量与频率的关系	光电效应、光子能量计算
-\(E=mc^2\)	质能关系	理解质量与能量的联系
-\(p=mv\)	经典力学中的动量定义	引出动量概念，但不能直接当作光子的公式
-\(c=\lambda\nu\)	真空中光的波速关系	联系波长、频率和光速
+$E=h\nu$	光子能量与频率的关系	光电效应、光子能量计算
+$E=mc^2$	质能关系	理解质量与能量的联系
+$p=mv$	经典力学中的动量定义	引出动量概念，但不能直接当作光子的公式
+$c=\lambda\nu$	真空中光的波速关系	联系波长、频率和光速
 
-\[
+$$
 p=\frac{h\nu}{c}
-\]
+$$
 
-而真空中光速满足 \(c=\lambda\nu\)，即 \(\nu/c=1/\lambda\)，所以最终得到：
-\[
+而真空中光速满足 $c=\lambda\nu$，即 $\nu/c=1/\lambda$，所以最终得到：
+$$
 \boxed{p=\frac{h}{\lambda}}
-\]
+$$
 
 这就是光子的动量公式。
 
